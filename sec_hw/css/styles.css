@@ -1,0 +1,491 @@
+@import url(social_icons.css);
+
+@font-face {
+    font-family: "GothamBook";
+    src: url("../fonts/GothamBook.woff2") format("woff2"), url("../fonts/GothamBook.woff") format("woff");
+    font-weight: 350;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamMedium";
+    src: url("../fonts/gotham-medium-webfont.woff2") format("woff2"), url("../fonts/gotham-medium-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}s
+
+body{
+    background-image: linear-gradient(to top right, #0e6ba8 50%, #ddd 50%);
+    background-repeat: no-repeat;
+    font-family: "GothamBook", sans-serif;;
+}
+body::before{
+    content: "";
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 90px;
+    z-index: -1;
+    background: #efefef;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section__title{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #ddd;
+    text-shadow: 2px 1px 2px #000;
+    font-family: "GothamMedium", sans-serif;;
+    text-transform: uppercase;
+}
+/* header -------- */
+.header{
+    padding-top: 8px;
+    padding-bottom: 4px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(45deg, rgba(132,136,135,1) 0%, rgba(6,6,6,1) 100%);
+    z-index: 4;
+}
+
+.header__logo{
+    margin-right: 40px;
+    float: left;
+    width: 70px;
+}
+.logo__link, .social__item{
+    display: inline-block;
+}
+.header__social{
+    width: 70px;
+    float: right;
+    margin-left: 40px;
+}
+
+.logo__image, .social__item__image{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 1s;
+}
+.logo__image:hover,
+.social__item__image:hover{
+    transform: scale(1.1);
+}
+
+.menu__list{
+    width: calc(100% - 260px);
+    float: left;
+    color: #fff;
+    font-family: "GothamMedium", sans-serif;;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-right: 40px;
+    line-height: 74px;
+}
+.menu__item{
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    width: calc((100% - 30px) / 4);
+}
+.menu__item:first-child{
+    margin-left: 0px;
+}
+.menu__item__link{
+    transition: 1.3s;
+    display: inline-block;
+}
+.menu__item__link:hover{
+    transform: scale(1.1);
+}
+
+
+/* -------header */
+
+
+main{
+    margin-top: 86px;
+    min-height: calc(100vh - 86px);
+}
+
+
+/* footer ---- */
+.footer{
+    padding: 8px 0 4px 0;
+    height: 86px;
+    background: linear-gradient(225deg, rgba(132,136,135,1) 0%, rgba(6,6,6,1) 100%);
+}
+.footer__social{
+    float: left;
+    margin-right: 10px;
+}
+.footer__logo{
+    float: right;
+    margin-left: 10px;
+}
+.footer__copy{
+    float: right;
+    line-height: 74px;
+    text-align: center;
+    width: calc(100% - 160px);
+    color: #fff;
+    font-family: "GothamMedium", sans-serif;;
+    font-size: 12px;
+}
+/* -------footer */
+
+/* section about -------*/
+
+.about{
+    padding: 44px 0;
+    background-image: url(../images/sec1_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, .4);
+}
+
+.about__title{
+    max-width: 920px;
+    line-height: 36px;
+    font-size: 24px;
+}
+/* карусель */
+
+.carousel-wrapper{
+    height:600px;
+    position:relative;
+    max-width:920px;
+    margin:0 auto;
+}
+.carousel-item{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px 50px;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+    box-shadow: 0px 0px 6px #fff;
+}
+.carousel-item-content{
+    background: linear-gradient(225deg, rgba(132,136,135,.8) 0%, rgba(6,6,6,.8) 100%);
+    padding: 20px 8px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.item-content-title{
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.arrow{
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev{
+    left:-30px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) rotate(135deg);
+}
+
+.arrow-next{
+    right:-30px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) rotate(-45deg);
+}
+
+.light{
+    color:white;
+}
+
+@media (max-width: 480px) {
+    .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+}
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+}
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background:url(../images/media1.png);
+    background-size:cover;
+}
+.item-2{
+    background:url(../images/media2.png);
+    background-size:cover;
+}
+.item-3{
+    background:url(../images/media3.png);
+    background-size:cover;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}  
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+/* ------ section about */
+
+
+/* section gallery------ */
+.gallery{
+    background-image: url(../images/sec2_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, .7);
+}
+
+.gallery__item{
+    height: 320px;
+    display: inline-block;
+    width: calc(33% - 20px);
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+}
+.gallery__item:nth-child(3n){
+    margin-right: 0;
+}
+.gallery__item-img{
+    width: 100%;
+    object-fit: cover;
+}
+.gallery__descr{
+    width: 33%;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 10px 10px;
+    
+}
+.gallery__descr-left{
+    float: left;
+}
+
+/* -------sec gallery */
+
+/* section price ------- */
+.price{
+    background-image: url(../images/sec3_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, .7);
+}
+    /* accordion----- */
+    .acor-container {
+        padding : 20px 0;
+    }
+    .acor-container .acor-body{
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        height: 0;
+        color: #fff;
+        line-height: 18px;
+        padding: 0 30px;
+        box-sizing: border-box;
+        transition: color 0.5s, padding 0.5s;
+        overflow: hidden;
+        font-family: "GothamBook", sans-serif;; 
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2);
+    }
+    .acor-body:nth-of-type(odd){
+        background:linear-gradient(225deg, rgba(132,136,135,.8) 0%, rgba(6,6,6,.8) 100%);
+    }
+    .acor-body:nth-of-type(even){
+        background:linear-gradient(45deg, rgba(171, 182, 193, 0.8) 0%, rgba(17, 22, 24, 0.8) 100%);
+    }
+    .zena{
+        font-size: 24px;
+        padding: 12px 24px 20px;
+
+    }
+    .acor-container .acor-body p {
+        margin: 0 0 10px;
+    }
+    .acor-container label {
+        cursor: pointer;
+        background: linear-gradient(45deg, rgba(132,136,135,1) 0%, rgba(6,6,6,1) 100%);;
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        color: #e4c4c4;
+        font-weight: 300;
+        box-sizing: border-box;
+        z-index: 100;
+        font-family: "GothamMedium", sans-serif;;   
+        font-size: 20px;
+        margin: 0 0 5px;
+        transition: color .35s;
+    }
+    .acor-container label:hover {
+        color: #FFF;
+    }
+    .acor-container input{
+        display: none;
+    }
+    .acor-container label:before {
+        content: '\276F';
+        float: right;
+    }
+    .acor-container input:checked + label {
+        background-color: #313538;
+        color: #FFF;
+        box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
+    }
+    .acor-container input:checked + label:before {
+        transition: transform .35s;
+        transform: rotate(90deg);
+    }
+    .acor-container input:checked + label + .acor-body {
+        height: auto;
+        margin-top: -5px;
+        color: #fff;
+        padding: 20px 30px 10px;
+    }
+    /* -------accordion */
+
+/*  ----------- sec price*/
+
+/* section contact ----------- */
+.contact{
+    background-image: url(../images/sec4_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, .7);
+    padding: 20px 20px 60px 20px;
+}
+.contact__title{
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.contact__info{
+    width: 50%;
+    display: inline-block;
+}
+.info__item {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "GothamBook", sans-serif;;
+    font-weight: 350;
+}
+
+.form__wrap {
+    width: calc(50% - 30px);
+    margin-left: 25px;
+    display: inline-block;
+}
+.form__input {
+    display: inline-block;
+    text-align: start;
+    background-color: transparent;
+    cursor: text;
+    font-family: "GothamBook", sans-serif;
+    font-size: 18px;
+    color: #dbe7f5e6;
+    line-height: 18px;
+    border-width: 100%;
+    border-style: none;
+    border-bottom: 1px solid #eaeff551;
+    padding: 0 0 16px 0;
+    width: 100%;
+    outline: 0;
+    transition: all 0.7s ease;
+}
+.form__input-last{
+    border-bottom: dashed 3px transparent;
+}
+.form__input:first-child {
+    margin-bottom: 38px;
+}
+
+.form__input::placeholder {
+    color: rgba(228, 233, 240, 0.4);
+}
+.form__input:focus {
+    border-bottom: 1px solid rgba(231, 236, 243, 0.9);
+}
+.form__btn {
+    width: calc(50% - 2px);
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    background-color: transparent;
+    font: 350 14px "GothamBook";
+    line-height: 14px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border: 1px solid #fff;
+    box-shadow: none;
+    transition: all 0.6s ease;
+    outline: 0;
+}
+
+.form__btn:active {
+    box-shadow: 0 2px 5px 2px #fff;
+}
+.form__btn:hover {
+    box-shadow: 0 0 3px #999;
+    background-color: #fff;
+    border: 1px solid transparent;
+    color: #000;
+}
+.form__input-last:invalid{
+    border-bottom: dashed 3px #ff0000;
+}
+/* некрасиво трансформировать кнопки в круг при наведении, оставила так */
+
+/* ---------------- sec contact*/
