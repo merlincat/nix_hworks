@@ -1,41 +1,32 @@
-.container{
-    max-width: 1080px;
-    width: 90%;
-    margin: 0 auto;
-
+body{
+    margin: 0;
+    padding: 0;
 }
-.content-wrap{
+body>div{
+    padding: 10px;
     height: 100vh;
+    background: repeating-linear-gradient(45deg, #7fffd4 10%, #f0ffff 30%) repeat;
 }
-.header{
-    width: 100%;
-    height: 100px;
-    background-color: aqua;
-    color: #5fa063;
-    text-align: center;
-    line-height: 100px;
-    margin-bottom: 15px;
+a[href*="htmlweb"]{
+    color: #4d1251;
 }
-.box-wrap{
-    display: flex;
-    justify-content: space-between;
-    
+div a[href*="htmlweb"]:first-child{
+    background: radial-gradient(at bottom, rgb(128, 0, 128), rgba(48, 11, 198, 0.272), rgba(33, 221, 108, 0.333), gold );
 }
-.yellow-box-wrap{
-    width: 40%;
-    margin-right: 15px;
-    height: ;
+a+a:visited{
+    color: rgb(255, 255, 0);
 }
-.yellow-box{
-    background-color: #e9e44f;
-    color: #d2691e;
-    height: 50px;
-    line-height: 50px;
-    padding: 8px;
-    text-align: center;
+/* Для каждой ссылки, которая является вторым предком -  не сделала, не разобралась, как работает, надеюсь на объяснение, так как хочу понять, как должно работать */
+a[href$="/css"]:hover{
+    border-top: 5px solid rgb(144, 23, 23);
+    border-left: 5px solid rgb(144, 23, 23);
+    border-bottom: 5px solid rgb(236, 13, 13);
+    border-right: 5px solid rgb(236, 13, 13);
+    border-radius: 50% 20% / 10% 40%;
 }
-.green-box{
-    background-color: rgb(108, 223, 108);
-    color: darkgreen;
-    padding: 28px 8px 18px;
+
+a:last-child::selection{
+    font-weight: 700;
+    color: rgb(255, 0, 0);
+    background-color: rgb(44, 105, 41);
 }

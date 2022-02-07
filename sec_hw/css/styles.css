@@ -11,21 +11,23 @@
     src: url("../fonts/gotham-medium-webfont.woff2") format("woff2"), url("../fonts/gotham-medium-webfont.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-}s
+}
 
 body{
-    background-image: linear-gradient(to top right, #0e6ba8 50%, #ddd 50%);
+    background: linear-gradient(to top right, #e15858 50%, #ddd 50%);
     background-repeat: no-repeat;
-    font-family: "GothamBook", sans-serif;;
+    font-family: "GothamBook", sans-serif;
+    position: relative;
 }
 body::before{
     content: "";
     position: fixed;
     height: 100vh;
     width: 100%;
-    top: 90px;
+    top: 96px;
     z-index: -1;
     background: #efefef;
+
 }
 *{
     padding: 0;
@@ -131,6 +133,8 @@ a{
 main{
     margin-top: 86px;
     min-height: calc(100vh - 86px);
+
+
 }
 
 
@@ -162,6 +166,7 @@ main{
 /* section about -------*/
 
 .about{
+
     padding: 44px 0;
     background-image: url(../images/sec1_bg.jpg);
     background-size: cover;
@@ -459,7 +464,7 @@ main{
     border-bottom: 1px solid rgba(231, 236, 243, 0.9);
 }
 .form__btn {
-    width: calc(50% - 2px);
+    width: calc(50% - 4px);
     display: inline-block;
     color: #fff;
     text-align: center;
